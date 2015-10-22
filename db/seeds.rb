@@ -8,7 +8,7 @@
 99.times do |n|
   full_name = Faker::Name.name
   email_address = "example-#{n+1}@example.com"
-  phone_number = Faker::PhoneNumber
+  phone_number = Faker::PhoneNumber.phone_number
   notes = Faker::Lorem.paragraph
   Customer.create(full_name: full_name,
                   email_address: email_address,
